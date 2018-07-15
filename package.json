@@ -1,0 +1,107 @@
+{
+  "name": "spring-boot-admin-server-ui",
+  "description": "Spring Boot Admin UI",
+  "private": true,
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "build": "cross-env NODE_ENV=production webpack --bail --hide-modules",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/vue-fontawesome": "0.0.23",
+    "ansi_up": "^3.0.0",
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
+    "bulma-badge": "^1.0.1",
+    "d3-array": "^1.2.1",
+    "d3-axis": "^1.0.8",
+    "d3-brush": "^1.0.4",
+    "d3-scale": "^2.1.0",
+    "d3-selection": "^1.3.0",
+    "d3-shape": "^1.2.0",
+    "d3-time": "^1.0.8",
+    "event-source-polyfill": "0.0.12",
+    "linkifyjs": "^2.1.6",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "moment-shortformat": "^2.1.0",
+    "popper.js": "^1.14.3",
+    "pretty-bytes": "^5.1.0",
+    "resize-observer-polyfill": "^1.5.0",
+    "rxjs": "^5.5.11",
+    "vue": "^2.5.16",
+    "vue-clickaway": "^2.2.1",
+    "vue-router": "^3.0.1",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.19",
+    "autoprefixer": "^8.6.2",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "css-hot-loader": "^1.3.9",
+    "css-loader": "^0.28.11",
+    "css-mqpacker": "^6.0.2",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^4.0.3",
+    "eslint-plugin-vue": "^4.5.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "glob": "^7.1.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.1.0",
+    "lodash-webpack-plugin": "^0.11.5",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "^0.6.2",
+    "vue-jest": "^2.6.0",
+    "vue-loader": "^14.2.3",
+    "vue-svg-loader": "^0.5.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^3.12.0",
+    "webpack-bundle-analyzer": "^2.13.1"
+  },
+  "browserslist": [
+    "> 2%",
+    "last 2 versions",
+    "not ie < 11"
+  ],
+  "jest": {
+    "testRegex": "spec.js$",
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "@/(.*)$": "<rootDir>/src/main/frontend/$1",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test/frontend/__mocks__/file-mock.js"
+    },
+    "transform": {
+      "\\.js$": "babel-jest",
+      "\\.vue$": "vue-jest",
+      "\\.svg$": "<rootDir>/src/test/frontend/__mocks__/vue-mock-component.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules.*([^\\.][^s][^v][^g])$"
+    ]
+  }
+}
